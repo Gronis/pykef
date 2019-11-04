@@ -32,9 +32,11 @@ See [home assistant thread](https://community.home-assistant.io/t/kef-ls50-wirel
 ## Examples
 Setup:
 ```python
+from pykef import KefSpeaker, InputSource
 host = '192.168.1.200'
 port = 50001
 speaker = KefSpeaker(host, port)
+speaker.source = InputSource.Bluetooth
 ```
 Set volume:
 ```python
@@ -46,7 +48,7 @@ volume = speaker.volume
 ```
 Set source:
 ```python
-speaker.source = InputSource.AUX
+speaker.source = InputSource.Aux
 ```
 Get source:
 ```python
